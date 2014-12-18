@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Frony</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta name="viewport"
+          content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <script src="/components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import"
+          href="/components/font-roboto/roboto.html">
+    <link rel="import"
+          href="/components/paper-shadow/paper-shadow.html">
+    <style>
+      html,body {
+        height: 100%;
+        margin: 0;
+        background-color: #E5E5E5;
+        font-family: 'RobotoDraft', sans-serif;
+      }
+      h2 {
+        font-size: 64px;
+        margin: 5%;
+      }
+      .i {
+        font-size: small;
+        font-style: italic;
+      }
+      paper-shadow {
+        background-color: #FFFFFF;
+        margin: 0 10% 0 10%;
+      }
+      .container {
+        width: 80%;
+        margin: 50px auto;
+        padding: 10%;
+      }
+      @media (min-width: 481px) {
+        .container {
+          width: 400px;
+        }
+      }
+    </style>
+  </head>
+  <body unresolved>
+      <paper-shadow z="1" layout center>
+        <div class="container" layout vertical center>
+          <h2>Hello.</h2>
+          <p>This site isn't quite ready yet.</p>
+          <p class="i">Feel free to grab a coffee while you wait</p>
+        </div>
+      </paper-shadow>
+  </body>
+</html>

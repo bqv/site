@@ -1,0 +1,25 @@
+{
+  "name": "personal",
+  "version": "0.1.0",
+  "description": "Personal Website",
+  "authors": [
+    "Tony Olagbaiye <frony0@gmail.com>"
+  ],
+  "license": "MPL2",
+  "homepage": "http://frony.co.uk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#~0.5.2",
+    "core-elements": "Polymer/core-elements#~0.5.2",
+    "paper-elements": "Polymer/paper-elements#~0.5.2",
+    "font-roboto": "Polymer/font-roboto#^0.5.0"
+  }
+}
