@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Frony</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <title>Tony Olagbaiye</title>
+    <link rel="shortcut icon" href="/favicon.ico?<?php print(time()) ?>" />
     <meta name="viewport"
           content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
     <script src="/components/webcomponentsjs/webcomponents.js"></script>
@@ -116,10 +116,7 @@
           </paper-item>
           <div class="copyright">
             <hr style="border-top: dotted 1px;" />
-            Copyright © Tony Olagbaiye <?php
-              $year = floor(time()/(365.25*86400)+1970);
-              print($year > 2014 ? "2014-".$year : $year);
-            ?>
+            Copyright © Tony Olagbaiye 2014
           </div>
         </core-menu>
       </core-header-panel>
@@ -129,7 +126,7 @@
           <h2>Hmm.</h2>
           <p>This site isn't quite ready yet.</p>
           <p>Feel free to grab a coffee while you wait</p>
-          <?php foreach(range(0,95) as $i){print("<br/>");} ?>
+          <p></p>
         </div>
       </paper-shadow>
     </core-scaffold>
@@ -138,4 +135,3 @@
     </script>
   </body>
 </html>
-<?php /* vi: set ai sw=2 ts=2 expandtab: */ ?>

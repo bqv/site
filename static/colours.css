@@ -1,0 +1,48 @@
+.indigo {
+  background-color: #693ab3;
+} .indigotipped {
+  border-top-color: #693ab3;
+}
+.violet {
+  background-color: #b33aa2;
+} .violettipped {
+  border-top-color: #b33aa2;
+}
+.red {
+  background-color: #b33a48;
+} .redtipped {
+  border-top-color: #b33a48;
+}
+.orange {
+  background-color: #b3873a;
+} .orangetipped {
+  border-top-color: #b3873a;
+}
+.yellow {
+  background-color: #83b33a;
+} .yellowtipped {
+  border-top-color: #83b33a;
+}
+.green {
+  background-color: #3ab34c;
+} .greentipped {
+  border-top-color: #3ab34c;
+}
+.blue {
+  background-color: #3ab3a6;
+} .bluetipped {
+  border-top-color: #3ab3a6;
+}
+.grey {
+  background-color: #fafaf4;
+} .greytipped {
+  border-top-color: #fafaf4;
+}
+.arrow {
+  height: 0px; width: 0; margin: auto;
+  border-top-width: 50px;
+  border-top-style: solid;
+  border-right: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-bottom: 0 solid;
+}
