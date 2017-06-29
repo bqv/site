@@ -1,0 +1,234 @@
+<link rel="import" href="/components/paper-material/paper-material.html">
+
+<dom-module id="time-line">
+  <style>
+      :host > div > section {
+        width: 90%;
+        max-width: 1170px;
+        margin: auto;
+        padding-top: 2em;
+        position: relative;
+      }
+      section::after {
+        /* clearfix */
+        content: '';
+        display: table;
+        clear: both;
+      }
+      section::before {
+        /* this is the vertical line */
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 18px;
+        height: 100%;
+        width: 4px;
+        background: #d7e4ed;
+      }
+      @media only screen and (min-width: 1170px) {
+        :host > div > section {
+          padding-top: 3em;
+        }
+        section::before {
+          left: 50%;
+          margin-left: -2px;
+        }
+        ::content time-event:first-child {
+          //margin-top: 0;
+        }
+        ::content time-event:last-child {
+          //margin-bottom: 0;
+        }
+        ::content time-event:nth-child(even)::shadow .event-box {
+          float: right;
+        }
+        ::content time-event:nth-child(even)::shadow .event-box::before {
+          top: 24px;
+          left: auto;
+          right: 100%;
+          border-color: transparent;
+          border-right-color: white;
+        }
+        ::content time-event:nth-child(even)::shadow .event-box ::content > a {
+          float: right;
+        }
+        ::content time-event:nth-child(even)::shadow .event-box ::content > span {
+          left: auto;
+          right: 130%;
+          text-align: right;
+        }
+      }
+    </style>
+  <template>
+
+    <div class="grey">
+      <section>
+        <content></content>
+      </section>
+    </div>
+  </template>
+  <script>
+    Polymer({ is: 'time-line' });
+  </script>
+</dom-module>
+
+<dom-module id="time-event">
+  <link rel="import" type="css" href="/static/reset.css">
+  <style>
+      :host {
+        display: block;
+        position: relative;
+        padding: 2em 0;
+      }
+      :host:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      @media only screen and (min-width: 1170px) {
+        :host {
+          padding: 4em 0;
+        }
+      }
+      .event-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+        background: #75ce66;
+        background: #c03b44;
+        background: #f0ca45;
+      }
+      .event-image ::content img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        left: 50%;
+        top: 50%;
+        margin-left: -12px;
+        margin-top: -12px;
+      }
+      @media only screen and (min-width: 1170px) {
+        .event-image {
+          width: 60px;
+          height: 60px;
+          left: 50%;
+          margin-left: -30px;
+          /* Force Hardware Acceleration in WebKit */
+          -webkit-transform: translateZ(0);
+          -webkit-backface-visibility: hidden;
+        }
+      }
+      .event-box {
+        position: relative;
+        margin-left: 60px;
+        background: white;
+        border-radius: 0.25em;
+        padding: 1em;
+        box-shadow: 0 3px 0 #d7e4ed;
+        box-sizing: border-box;
+      }
+      .event-box:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .event-box ::content > h2 {
+        color: #303e49;
+      }
+      .event-box ::content > p, .event-box ::content > a, .event-box ::content > span {
+        font-size: 13px;
+        font-size: 0.8125rem;
+      }
+      .event-box ::content > a, .event-box ::content > span {
+        display: inline-block;
+      }
+      .event-box ::content > p {
+        margin: 1em 0;
+        line-height: 1.6;
+      }
+      .event-box ::content > a {
+        float: right;
+        padding: .8em 1em;
+        background: #acb7c0;
+        color: white;
+        border-radius: 0.25em;
+      }
+      .event-box ::content > span {
+        float: left;
+        padding: .8em 0;
+        opacity: .7;
+      }
+      .event-box::before {
+        content: '';
+        position: absolute;
+        top: 16px;
+        right: 100%;
+        height: 0;
+        width: 0;
+        border: 7px solid transparent;
+        border-right: 7px solid white;
+      }
+      @media only screen and (min-width: 768px) {
+        .event-box ::content > h2 {
+          font-size: 20px;
+          font-size: 1.25rem;
+        }
+        .event-box ::content > p {
+          font-size: 16px;
+          font-size: 1rem;
+        }
+        .event-box ::content > a, .event-box ::content > span {
+          font-size: 14px;
+          font-size: 0.875rem;
+        }
+      }
+      @media only screen and (min-width: 1170px) {
+        .event-box {
+          margin-left: 0;
+          padding: 1.6em;
+          width: 43%;
+        }
+        .event-box::before {
+          top: 24px;
+          left: 100%;
+          border-color: transparent;
+          border-left-color: white;
+        }
+        .event-box ::content > a {
+          float: left;
+        }
+        .event-box ::content > span {
+          position: absolute;
+          width: 100%;
+          left: 130%;
+          top: 6px;
+          font-size: 16px;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  <template>
+
+    <div>
+      <div class="event-image">
+        <content select="img"></content>
+      </div>
+
+      <div class="event-box">
+        <content select="h2"></content>
+        <content select="p"></content>
+        <content select="a"></content>
+        <content select="span"></content>
+      </div>
+    </div>
+  </template>
+  <script>
+    Polymer({ is: 'time-event' });
+  </script>
+</dom-module>
+<!--?php /* vi: set ai sw=2 ts=2 expandtab: */ ?-->

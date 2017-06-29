@@ -1,0 +1,47 @@
+<link rel="import" href="/components/paper-material/paper-material.html">
+<link rel="import" href="/components/paper-progress/paper-progress.html">
+<link rel="import" href="/components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="skill-lang">
+  <style>
+      [layout] {
+        @apply(--layout);
+      }
+      [layout][horizontal] {
+        @apply(--layout-horizontal);
+      }
+      [layout][center] {
+        @apply(--layout-center);
+      }
+      paper-shadow {
+        background-color: #FFFFFF;
+        padding: 0.75em 1em;
+        margin: 2%;
+        white-space: nowrap;
+      }
+      paper-progress {
+        margin: auto;
+        width: 5em;
+      }
+      paper-material {
+        background: white;
+        padding: 0.7em 1em;
+      }
+    </style>
+  <template>
+    <paper-material horizontal layout center>
+      <content></content>
+      &nbsp;
+      <paper-progress value="{{exp}}" secondary-progress="{{skill}}"></paper-progress>
+    </paper-material>
+  </template>
+  <script>
+    Polymer({
+      is: 'skill-lang',
+      properties: {
+        exp: { notify: true },
+        skill: { notify: true }
+      }
+    });
+  </script>
+</dom-module>

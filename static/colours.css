@@ -38,11 +38,3 @@
 } .greytipped {
   border-top-color: #fafaf4;
 }
-.arrow {
-  height: 0px; width: 0; margin: auto;
-  border-top-width: 50px;
-  border-top-style: solid;
-  border-right: 50px solid transparent;
-  border-left: 50px solid transparent;
-  border-bottom: 0 solid;
-}

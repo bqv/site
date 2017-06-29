@@ -1,0 +1,67 @@
+<link rel="import" href="/components/paper-material/paper-material.html">
+
+  <!--
+      TODO(polyup): unable to infer path to components
+      directory. This import path is probably incomplete.
+   -->
+  <link rel="import" href="/components/iron-flex-layout/iron-flex-layout.html">
+<dom-module id="lang-box">
+  <style>
+    /* TODO(polyup): For speed, consider reworking these styles with .classes
+                     and #ids rather than [attributes].
+    */
+    [layout] {
+      @apply(--layout);
+    }
+    [layout][vertical] {
+      @apply(--layout-vertical);
+    }
+    [layout][horizontal] {
+      @apply(--layout-horizontal);
+    }
+    [layout][center] {
+      @apply(--layout-center);
+    }
+  </style>
+  <style>
+      paper-shadow {
+        background-color: #FFFFFF;
+        padding: 0.75em 1em;
+        margin: 2%;
+        width: 250px;
+      }
+      paper-progress {
+        margin: auto;
+        width: 10em;
+      }
+      paper-material {
+        background: white;
+        padding: 1em 2em;
+      }
+      h4 {
+        white-space: nowrap;
+      }
+      #tagline, #text {
+        text-align: justify;
+      }
+      #tagline {
+        font-style: italic;
+      }
+    </style>
+  <template>
+    <paper-material vertical="" layout="">
+      <h4 horizontal="" layout="" center=""><span>{{type}}</span>&nbsp;<paper-progress value="{{fluency}}"></paper-progress></h4>
+      <span id="tagline"><content select="span"></content></span>
+      <span id="text"><content></content></span>
+    </paper-material>
+  </template>
+  <script>
+    Polymer({
+      is: 'lang-box',
+      properties: {
+        fluency: { notify: true },
+        type: { notify: true }
+      }
+    });
+  </script>
+</dom-module>
