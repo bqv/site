@@ -1,7 +1,7 @@
 <link rel="import" href="/components/paper-material/paper-material.html">
 <link rel="import" href="/components/paper-button/paper-button.html">
 <link rel="import" href="/components/iron-collapse/iron-collapse.html">
-<link rel="import" href="/elements/pdf-reader.html">
+<link rel="import" href="/components/pdf-element/pdf-element.html">
 
   <!--
       TODO(polyup): unable to infer path to components
@@ -73,7 +73,7 @@
           <paper-button on-click="togglepreview" title="{{preview ? " collapse"="" :="" "expand"}}"="">{{_computeExpression1(preview)}}</paper-button>
         </h2>
         <iron-collapse id="cvpreview" opened="{{preview}}">
-          <!--pdf-reader width="400" height="566" src="/static/cv.pdf"></pdf-reader-->
+          <pdf-element downloadable width="400" height="566" src="/static/cv.pdf"></pdf-element>
         </iron-collapse>
         <div horizontal="" layout="" wrap="">
           <a href="/static/cv.pdf">PDF</a>

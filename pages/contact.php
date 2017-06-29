@@ -28,7 +28,7 @@
       }
       @media (min-width: 481px) {
         .container {
-          width: 400px;
+          width: 100%;
         }
       }
       paper-shadow {
@@ -66,7 +66,7 @@
     </style>
   <template>
     <div class="grey">
-      <div horizontal layout wrap>
+      <div horizontal layout nowrap>
         <paper-material elevation="1" flex layout center>
           <div class="container" layout vertical>
             <h3>Tony Olagbaiye</h3>
@@ -79,14 +79,14 @@
           </div>
         </paper-material>
         <paper-material elevation="1" flex layout center>
-          <google-map id="gmap" latitude="52.883560" longitude="-1.974060" fittomarkers>
+          <google-map id="gmap" latitude="52.883560" longitude="-1.974060" fittomarkers api-key="AIzaSyDrqjD_Lj9jR-8nX_gJdRAHOTeqfWc8MH4">
             <google-map-marker latitude="53.948639" longitude="-1.027540" title="Term Address">
               <h4>Term Address</h4>
               <p>Tony Olagbaiye<br>
-              125A Grenville Street<br>
-              Edgeley<br>
-              Stockport<br>
-              SK3 9EU</p>
+              19 Hadrian Avenue<br>
+              Heslington<br>
+              York<br>
+              YO10 3RD</p>
             </google-map-marker>
             <google-map-marker latitude="51.440380" longitude="-0.096620" title="Home Address">
               <h4>Home Address</h4>
@@ -109,10 +109,10 @@
   <script>
     Polymer({
       is: 'page-contact',
-      ready: function (e) {
-        this.ready = function (e) {
+      attached: function (e) {
+        this.async(function () {
           this.$.gmap.resize();
-        }.bind(this);
+        });
       }
     });
   </script>

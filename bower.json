@@ -22,7 +22,8 @@
     "paper-elements": "PolymerElements/paper-elements#^1.0.7",
     "font-roboto": "PolymerElements/font-roboto#>=1.0.1",
     "star-ratings": "PolymerLabs/star-ratings",
-    "google-map": "GoogleWebComponents/google-map#^1.1.10"
+    "google-map": "GoogleWebComponents/google-map#^1.1.10",
+    "pdf-element": "^1.0.14"
   },
   "main": "index.php",
   "moduleType": []
