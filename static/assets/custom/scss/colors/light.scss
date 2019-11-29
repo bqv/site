@@ -6,7 +6,7 @@
 /* Backgrounds */
 .ui-bg-color01   {background-color: $color02 !important;}
 .ui-bg-color02   {background-color: $color20 !important;}
-.boxed {  background-image: url('../../images/backgrounds/footer_lodyas.png');  }
+.boxed {  background-image: url('../images/backgrounds/footer_lodyas.png');  }
 
 /* Blocks */
 .ui-block-color01   {background-color: $color05 !important;}
@@ -168,7 +168,7 @@ footer.dark {
 
 /* Mark */
 #mark {
-  background-image: url('../../images/backgrounds/crossword.png');
+  background-image: url('../images/backgrounds/crossword.png');
   .ui-block-color05   {background-color: $color05 !important;}
   .ui-block-color06   {background-color: $color05 !important;}
   .ui-block-color07   {background-color: $color04 !important;}

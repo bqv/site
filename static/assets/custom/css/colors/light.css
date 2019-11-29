@@ -297,7 +297,7 @@
   background-color: #676767 !important; }
 
 .boxed {
-  background-image: url("../../images/backgrounds/footer_lodyas.png"); }
+  background-image: url("../images/backgrounds/footer_lodyas.png"); }
 
 /* Blocks */
 .ui-block-color01 {
@@ -480,7 +480,7 @@ footer.dark .cv-link a {
 /* Special Layout Styles */
 /* Mark */
 #mark {
-  background-image: url("../../images/backgrounds/crossword.png"); }
+  background-image: url("../images/backgrounds/crossword.png"); }
   #mark .ui-block-color05 {
     background-color: #dfdfdf !important; }
   #mark .ui-block-color06 {

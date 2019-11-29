@@ -297,7 +297,7 @@
   background-color: #3a5a77 !important; }
 
 .boxed {
-  background-image: url("../../images/backgrounds/retina_wood.png"); }
+  background-image: url("../images/backgrounds/retina_wood.png"); }
 
 /* Blocks */
 .ui-block-color01 {
@@ -466,7 +466,7 @@ footer.dark .cv-link a {
 /* Special Layouts Styles */
 /* Mark */
 #mark {
-  background-image: url("../../images/backgrounds/old_moon.png"); }
+  background-image: url("../images/backgrounds/old_moon.png"); }
   #mark .ui-block-color05 {
     background-color: #2d7fb4 !important; }
   #mark .ui-block-color06 {

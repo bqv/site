@@ -297,7 +297,7 @@
   background-color: #354F52 !important; }
 
 .boxed {
-  background-image: url("../../images/backgrounds/leather.png"); }
+  background-image: url("../images/backgrounds/leather.png"); }
 
 /* Blocks */
 .ui-block-color01 {
@@ -455,7 +455,7 @@ footer.dark .cv-link a {
 /* Special Layout Styles */
 /* Mark */
 #mark {
-  background-image: url("../../images/backgrounds/extra_clean_paper.png"); }
+  background-image: url("../images/backgrounds/extra_clean_paper.png"); }
   #mark .ui-block-color05 {
     background-color: #4C827E !important; }
   #mark .ui-block-color06 {
